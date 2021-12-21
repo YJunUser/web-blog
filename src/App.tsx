@@ -1,11 +1,17 @@
 import React from 'react';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { MerryChristmas } from './pages/MerryChristmas';
+import { NoMatch } from './pages/NoMatch';
 
 function App() {
   return (
-    <div className="App">
-      <h1>app</h1>
-    </div>
+    <React.Fragment>
+      <Routes>
+        <Route element={<MerryChristmas></MerryChristmas>} path="/"></Route>
+        <Route path="*" element={<NoMatch></NoMatch>}></Route>
+      </Routes>
+    </React.Fragment>
   );
 }
 
