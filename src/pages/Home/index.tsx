@@ -1,9 +1,10 @@
 import React from 'react';
+import { Introduction } from './components/Introduction';
 
 export const Home = () => {
   return (
-    <>
-      <h1>Home</h1>
-    </>
+    <React.Fragment>
+      <Introduction></Introduction>
+    </React.Fragment>
   );
 };

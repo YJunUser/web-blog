@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  height: calc(100% - 90px);
   justify-content: center;
-  min-width: 100vw;
 `;

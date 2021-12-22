@@ -11,8 +11,7 @@ export const Content = styled.div`
 
 export const Widget = styled.div`
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
   background: #bc0d0d;
