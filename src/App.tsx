@@ -30,6 +30,7 @@ const Container = styled.main`
   font-family: Heebo;
   font-style: normal;
   height: 100vh;
+  position: relative;
 `;
 
 export default App;
