@@ -23,4 +23,8 @@ export const Link = styled.a<{ color: string }>`
 
 export const Article = styled.article`
   padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
 `;
