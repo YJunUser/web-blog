@@ -1,6 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
 const apiBaseUrl = '';
+
+export interface Response<T> {
+  data?: T;
+}
 class HttpRequest {
   constructor(
     public baseURL: string | undefined = apiBaseUrl,
