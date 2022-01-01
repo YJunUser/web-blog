@@ -2,8 +2,9 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import { Article } from './pages/Article';
+import { Articles } from './pages/Articles';
 import { Home } from './pages/Home';
-import { MerryChristmas } from './pages/MerryChristmas';
 import { NoMatch } from './pages/NoMatch';
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
       <Routes>
         <Route element={<Layout></Layout>}>
           <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/articles" element={<Articles></Articles>}></Route>
           <Route
-            path="/merry"
-            element={<MerryChristmas></MerryChristmas>}
+            path="/articles/:article"
+            element={<Article></Article>}
           ></Route>
           <Route path="*" element={<NoMatch></NoMatch>}></Route>
         </Route>

@@ -31,6 +31,7 @@ export const Intro = styled.div`
   white-space: nowrap;
   overflow: hidden;
   margin-top: 30px;
+  cursor: pointer;
 `;
 
 export const FirstLine = styled.div`

@@ -16,3 +16,12 @@ export const getArticles = (): AxiosPromise<Response<Article[]>> => {
     method: 'get',
   });
 };
+
+export const getArticleByPath = (
+  path: string
+): AxiosPromise<Response<string>> => {
+  return http.request({
+    url: `/api/articles/${path}`,
+    method: 'get',
+  });
+};

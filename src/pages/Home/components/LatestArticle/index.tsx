@@ -18,6 +18,7 @@ import { ReactComponent as NginxIcon } from '../../../../assets/Components/Icons
 import { useNavigate } from 'react-router-dom';
 
 const ArticleCom = ({ article }: { article: Article }) => {
+  const navigate = useNavigate();
   const SwitchIcon = (): JSX.Element => {
     switch (article.tags) {
       case 'CSS': {
@@ -35,8 +36,13 @@ const ArticleCom = ({ article }: { article: Article }) => {
     }
     return <JavascriptIcon></JavascriptIcon>;
   };
+
   return (
-    <Intro>
+    <Intro
+      onClick={() => {
+        navigate(`/articles/${article.title}`);
+      }}
+    >
       <FirstLine>
         <SwitchIcon></SwitchIcon>
         <span>{article.title}</span>
@@ -71,7 +77,7 @@ export const LatestArticle = () => {
         </AllActives>
       </TitleContainer>
       {articles.map((article, index) => {
-        return <ArticleCom article={article}></ArticleCom>;
+        return <ArticleCom article={article} key={index}></ArticleCom>;
       })}
     </MainContent>
   );
