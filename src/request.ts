@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
-const apiBaseUrl = '';
+const apiBaseUrl =
+  process.env.NODE_ENV === 'development' ? 'http://localhost:4000' : '';
 
 export interface Response<T> {
   data?: T;
