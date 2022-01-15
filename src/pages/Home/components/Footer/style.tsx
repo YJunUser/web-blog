@@ -10,5 +10,6 @@ export const Container = styled.footer`
     &:nth-of-type(n + 2) {
       margin-left: 33px;
     }
+    cursor: pointer;
   }
 `;

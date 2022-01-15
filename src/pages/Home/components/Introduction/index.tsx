@@ -1,8 +1,11 @@
 import { Avatar } from '@douyinfe/semi-ui';
 import { Article, Content, Link, Title } from './style';
 import Me from '../../../../assets/me.jpg';
-
-export const Introduction = () => {
+interface IntroProps {
+  setModalVisible: (modalVisible: boolean) => void;
+}
+export const Introduction = (props: IntroProps) => {
+  const { setModalVisible } = props;
   return (
     <Article>
       <div>
@@ -30,9 +33,13 @@ export const Introduction = () => {
           , <br></br>
           and Chat on&nbsp;
           <Link
-            href="https://github.com/YJunUser"
             color="#39b362"
             target={'_blank'}
+            onClick={(e) => {
+              e.preventDefault();
+              setModalVisible(true);
+            }}
+            href="/"
           >
             WeChat
           </Link>

@@ -1,13 +1,17 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import { AboutCom } from './pages/About';
 import { Article } from './pages/Article';
 import { Articles } from './pages/Articles';
 import { Home } from './pages/Home';
 import { NoMatch } from './pages/NoMatch';
 
 function App() {
+  useEffect(() => {
+    document.title = '姚伯骏的个人网站';
+  }, []);
   return (
     <Container>
       <Routes>
@@ -18,6 +22,7 @@ function App() {
             path="/articles/:article"
             element={<Article></Article>}
           ></Route>
+          <Route path="/about" element={<AboutCom></AboutCom>}></Route>
           <Route path="*" element={<NoMatch></NoMatch>}></Route>
         </Route>
       </Routes>

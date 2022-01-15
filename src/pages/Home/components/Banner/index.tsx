@@ -1,7 +1,12 @@
 import { Chat, Content, Ground, Title } from './style';
 import chatPng from '../../../../assets/chat.png';
 
-export const Banner = () => {
+interface BannerProps {
+  modalVisible: boolean;
+  setModalVisible: (modalVisible: boolean) => void;
+}
+export const Banner = (props: BannerProps) => {
+  const { modalVisible, setModalVisible } = props;
   return (
     <Ground>
       <Title>Are you interested in me?</Title>
@@ -10,7 +15,11 @@ export const Banner = () => {
         working, how you feel about me.<br></br>
         (maybe we can find a way to work together or become friends.)
       </Content>
-      <Chat>
+      <Chat
+        onClick={() => {
+          setModalVisible(true);
+        }}
+      >
         <img src={chatPng} alt=""></img>
         <span>Chat</span>
       </Chat>

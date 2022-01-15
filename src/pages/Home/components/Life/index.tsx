@@ -12,6 +12,7 @@ export const Life = () => {
           <IconDoubleChevronRight size="small" style={{ marginLeft: '6px' }} />
         </AllActives>
       </TitleContainer>
+      <span>即将更新...</span>
     </MainContent>
   );
 };

@@ -12,8 +12,8 @@ export const Layout = (): React.ReactElement => {
         <Right>
           <CustomLink to="/">Home</CustomLink>
           <CustomLink to="/articles">Articles</CustomLink>
-          <CustomLink to="/life">Life</CustomLink>
-          <CustomLink to="/contact">Contact</CustomLink>
+          {/* <CustomLink to="/life">Life</CustomLink> */}
+          <CustomLink to="/about">About</CustomLink>
         </Right>
       </Container>
       <Outlet></Outlet>
