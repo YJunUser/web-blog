@@ -34,3 +34,17 @@ export const getArticleByPath = (
     method: 'get',
   });
 };
+
+export const getLife = (): AxiosPromise<Response<Article[]>> => {
+  return http.request({
+    url: getTrueURL('/life'),
+    method: 'get',
+  });
+};
+
+export const getLifeByPath = (path: string): AxiosPromise<Response<string>> => {
+  return http.request({
+    url: getTrueURL(`/life/${path}`),
+    method: 'get',
+  });
+};

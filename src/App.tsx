@@ -6,7 +6,9 @@ import { AboutCom } from './pages/About';
 import { Article } from './pages/Article';
 import { Articles } from './pages/Articles';
 import { Home } from './pages/Home';
+import { Moments } from './pages/Moments';
 import { NoMatch } from './pages/NoMatch';
+import { Moment } from './pages/Moment';
 
 function App() {
   useEffect(() => {
@@ -22,6 +24,8 @@ function App() {
             path="/articles/:article"
             element={<Article></Article>}
           ></Route>
+          <Route path="/life" element={<Moments></Moments>}></Route>
+          <Route path="/life/:path" element={<Moment></Moment>}></Route>
           <Route path="/about" element={<AboutCom></AboutCom>}></Route>
           <Route path="*" element={<NoMatch></NoMatch>}></Route>
         </Route>
