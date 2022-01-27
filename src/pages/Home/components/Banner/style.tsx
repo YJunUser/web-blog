@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
-export const Ground = styled.div`
+export const Ground = styled.div<{ big: boolean }>`
   width: 100vw;
   height: 400px;
   background: #edf7fa;
   position: absolute;
-  left: calc((1200px - 100vw) / 2);
+  left: ${(props) => (props.big ? 'calc((1200px - 100vw) / 2);' : '0')};
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
