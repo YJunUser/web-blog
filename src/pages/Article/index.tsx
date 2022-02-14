@@ -15,6 +15,7 @@ export const Article = () => {
       const res = await (await getArticleByPath(params.article || '')).data;
       setHtmlStr(res.data || '');
     };
+    window.scrollTo(0, 0);
 
     getArticle();
   }, []);
