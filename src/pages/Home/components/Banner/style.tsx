@@ -16,6 +16,7 @@ export const Title = styled.span`
   font-weight: bold;
   font-size: 48px;
   line-height: 142%;
+  text-align: center;
 `;
 
 export const Content = styled.span`

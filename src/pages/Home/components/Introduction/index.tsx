@@ -1,11 +1,14 @@
 import { Avatar } from '@douyinfe/semi-ui';
 import { Article, Content, Link, Title } from './style';
 import Me from '../../../../assets/me.jpg';
+
 interface IntroProps {
   setModalVisible: (modalVisible: boolean) => void;
+  isSmall: boolean;
 }
 export const Introduction = (props: IntroProps) => {
-  const { setModalVisible } = props;
+  const { setModalVisible, isSmall } = props;
+
   return (
     <Article>
       <div>
@@ -46,10 +49,12 @@ export const Introduction = (props: IntroProps) => {
           .
         </Content>
       </div>
-      <Avatar
-        src={Me}
-        style={{ width: '255px', height: '255px', marginRight: '60px' }}
-      ></Avatar>
+      {!isSmall ? (
+        <Avatar
+          src={Me}
+          style={{ width: '255px', height: '255px', marginRight: '60px' }}
+        ></Avatar>
+      ) : null}
     </Article>
   );
 };

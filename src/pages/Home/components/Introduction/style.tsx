@@ -26,5 +26,6 @@ export const Article = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
 `;

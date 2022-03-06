@@ -1,26 +1,16 @@
 import { Chat, Content, Ground, Title } from './style';
 import chatPng from '../../../../assets/chat.png';
-import { useEffect, useState } from 'react';
 
 interface BannerProps {
   modalVisible: boolean;
   setModalVisible: (modalVisible: boolean) => void;
+  isBig: boolean;
 }
 export const Banner = (props: BannerProps) => {
-  const { setModalVisible } = props;
-
-  const [big, setBig] = useState<boolean>(true);
-
-  useEffect(() => {
-    window.onresize = function () {
-      const width = window.innerWidth;
-      if (width > 1200) setBig(true);
-      else setBig(false);
-    };
-  }, []);
+  const { setModalVisible, isBig } = props;
 
   return (
-    <Ground big={big}>
+    <Ground big={isBig}>
       <Title>Are you interested in me?</Title>
       <Content>
         Let's have a conversation! I'd love to hear about what you're <br></br>

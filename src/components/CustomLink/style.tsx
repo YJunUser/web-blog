@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const LinkStyle = styled(Link)<{ active: boolean }>`
+export const LinkStyle = styled(Link)<{ active: number }>`
   text-decoration: none;
   color: ${(props) => (props.active ? 'var(--primary)' : '#000')};
   font-family: Heebo;

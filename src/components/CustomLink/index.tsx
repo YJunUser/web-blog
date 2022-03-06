@@ -7,7 +7,7 @@ export const CustomLink = ({ children, to, ...props }: LinkProps) => {
 
   return (
     <div>
-      <LinkStyle active={Boolean(match)} to={to} {...props}>
+      <LinkStyle active={!!match ? 1 : 0} to={to} {...props}>
         {children}
       </LinkStyle>
     </div>
