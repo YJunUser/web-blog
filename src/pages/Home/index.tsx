@@ -6,6 +6,7 @@ import { Introduction } from './components/Introduction';
 import { LatestArticle } from './components/LatestArticle';
 import { Life } from './components/Life';
 import vxPng from '../../assets/vx.jpg';
+import { WxImg } from './style';
 export const Home = () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false);
 
@@ -48,12 +49,7 @@ export const Home = () => {
           setModalVisible(false);
         }}
       >
-        <img
-          src={vxPng}
-          width={'100%'}
-          height={'100%'}
-          alt="sorry please contact 1239923786@qq.com"
-        ></img>
+        <WxImg alt="sorry please contact 1239923786@qq.com" src={vxPng}></WxImg>
       </Modal>
     </React.Fragment>
   );
