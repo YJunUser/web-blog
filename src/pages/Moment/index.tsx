@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getLifeByPath } from '../../api/articles';
 import { lazyLoad } from '../../utils';
+import './style.css';
 
 function showhtml(htmlString: string) {
   var html = { __html: htmlString };
