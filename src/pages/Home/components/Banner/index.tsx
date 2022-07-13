@@ -22,7 +22,11 @@ export const Banner = (props: BannerProps) => {
           setModalVisible(true);
         }}
       >
-        <img src={chatPng} alt=""></img>
+        <img
+          src={chatPng}
+          alt=""
+          style={{ width: '30px', height: '30px' }}
+        ></img>
         <span>Chat</span>
       </Chat>
     </Ground>
