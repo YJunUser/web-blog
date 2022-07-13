@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getLifeByPath } from '../../api/articles';
+import { lazyLoad } from '../../utils';
 
 function showhtml(htmlString: string) {
   var html = { __html: htmlString };
@@ -18,5 +19,13 @@ export const Moment = () => {
 
     getArticle();
   }, []);
+
+  useEffect(() => {
+    document.addEventListener('scroll', lazyLoad);
+    return () => {
+      document.removeEventListener('scroll', lazyLoad);
+    };
+  }, []);
+
   return <div style={{ paddingBottom: '30px' }}>{showhtml(htmlStr)}</div>;
 };
